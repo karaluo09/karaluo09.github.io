@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kara Luo | Stanford GSB</title>
+<meta name="description" content="Kara Luo is a PhD candidate in Organizational Behavior at the Stanford Graduate School of Business. She studies how meaning and interpretation shape entrepreneurial action and its consequences, using computational analysis and experiments.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kara Luo | Stanford GSB">
+<meta property="og:description" content="I study how meaning and interpretation shape entrepreneurial action and its downstream consequences.">
+<meta property="og:image" content="https://www.karaluo.com/og-image.jpg">
+<meta property="og:url" content="https://www.karaluo.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kara Luo | Stanford GSB">
+<meta name="twitter:description" content="I study how meaning and interpretation shape entrepreneurial action and its downstream consequences.">
+<style>
+  :root{
+    --accent:#27496d;        /* deep blue accent */
+    --accent-soft:#eef2f7;   /* tint for bands/cards */
+    --ink:#1c2024;
+    --muted:#626a72;
+    --line:#e7e9ec;
+    --bg:#ffffff;
+    --maxw:840px;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:17px/1.7 var(--sans); -webkit-font-smoothing:antialiased;
+  }
+  .skip{position:absolute;left:-999px}
+  .skip:focus{left:8px;top:8px;background:var(--accent);color:#fff;padding:8px 12px;border-radius:4px;z-index:10}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* header */
+  header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(8px);z-index:5}
+  header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:16px 28px;gap:10px}
+  .brand{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:.01em;text-decoration:none;color:var(--ink)}
+  nav a{margin-left:22px;text-decoration:none;color:var(--muted);font-size:15px;transition:color .15s}
+  nav a:hover,nav a:focus{color:var(--accent)}
+
+  a{color:var(--accent)}
+  main{padding-top:8px}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:1fr 220px;gap:38px;align-items:start;padding:56px 0 8px}
+  .hero h1{font-family:var(--serif);font-size:40px;line-height:1.1;margin:0 0 6px;letter-spacing:.005em}
+  .hero .role{color:var(--muted);margin:0 0 22px;font-size:16.5px}
+  .hero p{margin:0 0 16px}
+  .portrait{width:220px;height:220px;object-fit:cover;object-position:center top;border-radius:14px;box-shadow:0 6px 24px rgba(20,30,45,.14);background:var(--accent-soft)}
+  .portrait-fallback{display:flex;align-items:center;justify-content:center;color:#9aa6b4;font-size:13px;text-align:center}
+  .hero-links{margin-top:24px !important;font-size:15px}
+  .hero-links a{display:inline-block;margin:0 18px 6px 0;text-decoration:none;color:var(--accent);border-bottom:1px solid transparent;transition:border-color .15s}
+  .hero-links a:hover{border-bottom-color:var(--accent)}
+  @media(max-width:640px){
+    .hero{grid-template-columns:1fr;gap:24px;padding-top:40px}
+    .portrait{width:160px;height:160px;order:-1}
+    .hero h1{font-size:33px}
+  }
+
+  /* sections */
+  h2{font-family:var(--serif);font-weight:600;font-size:25px;margin:56px 0 6px;letter-spacing:.005em}
+  .h2-rule{height:2px;width:46px;background:var(--accent);border-radius:2px;margin-bottom:20px}
+  .subhead{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:600;margin:30px 0 14px}
+  .note{color:var(--muted);font-size:15.5px}
+
+  /* papers */
+  .paper{margin:0 0 26px;padding-left:16px;border-left:2px solid var(--line)}
+  .paper:hover{border-left-color:var(--accent)}
+  .paper h3{font-family:var(--serif);font-weight:600;font-size:19.5px;margin:0 0 5px;line-height:1.35;color:var(--ink)}
+  .takeaway{font-weight:400;margin:5px 0 8px;color:#3c4349;font-size:16px;line-height:1.6}
+  .cite{color:var(--muted);font-size:14px;margin:0 0 6px}
+  .cite strong{color:#3c4349}
+  .cite a{color:var(--accent)}
+  .badge{display:inline-block;font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:2px 8px;margin:0 6px 6px 0;vertical-align:middle}
+  details summary{cursor:pointer;color:var(--accent);font-size:14.5px;outline:none}
+  details[open] summary{margin-bottom:6px}
+  details p{margin:6px 0 0;color:#3a4046;font-size:15px}
+  .coverage{font-size:14px;color:var(--muted);margin-top:6px}
+
+  /* teaching + quotes */
+  .course{margin:0 0 12px}
+  .course strong{display:block}
+  .course span{color:var(--muted);font-size:14.5px}
+  .quotes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 6px}
+  .quote{margin:0;background:var(--accent-soft);border-radius:12px;padding:18px 18px 14px;position:relative}
+  .quote p{font-family:var(--serif);font-style:italic;font-size:15px;line-height:1.5;margin:0 0 12px;color:#28333d}
+  .quote .who{color:var(--muted);font-size:12.5px;font-style:normal}
+  .quote::before{content:"\201C";font-family:Georgia,serif;font-size:46px;color:var(--accent);opacity:.22;position:absolute;top:6px;left:12px;line-height:1}
+  @media(max-width:680px){.quotes{grid-template-columns:repeat(2,1fr)}}
+
+  /* cv */
+  .cv-actions{margin:0 0 14px;font-size:15px}
+  .cv-frame{width:100%;height:84vh;min-height:600px;border:1px solid var(--line);border-radius:12px;background:#f7f8fa}
+
+  footer{border-top:1px solid var(--line);margin-top:64px;padding:26px 0 60px;color:var(--muted);font-size:14px}
+  footer a{margin-right:18px;color:var(--accent)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#main">Kara Luo</a>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#cv">CV</a>
+      <a href="https://scholar.google.com/citations?user=7ufowOMAAAAJ&hl=en" target="_blank" rel="noopener">Google&nbsp;Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <!-- ===================== HERO / BIO ===================== -->
+  <section class="hero">
+    <div>
+      <h1>Kara Luo</h1>
+      <p class="role">PhD Candidate in Organizational Behavior<br>Stanford Graduate School of Business</p>
+      <p>I study how <strong>meaning and interpretation</strong> shape downstream consequences for individuals and organizations. I am particularly interested in studying these dynamics in <strong>entrepreneurial contexts</strong>, where novelty, ambiguity, and uncertainty leave the most room for interpretation to shape what happens next.</p>
+      <p>Beyond establishing that interpretation matters, I aim to specify the <strong>structure of interpretive differences</strong> between individuals and how these differences translate into concrete outcomes for founders, evaluators, and organizations. I approach these questions by pairing <strong>computational analysis of large-scale text data</strong> with <strong>experiments</strong>.</p>
+      <p>I am advised by Amir Goldberg, with Jesper S&oslash;rensen and Glenn Carroll on my committee. I hold an MEng and a BS in Electrical Engineering and Computer Science, along with a BS in Mathematics, all from MIT. Before my PhD, I held research positions at the Harvard Kennedy School, Yale, and the MIT Media Lab, and worked as a legal clerk in the intellectual property groups at Polsinelli and Morrison Foerster.</p>
+      <p class="hero-links">
+        <a href="mailto:karaluo@stanford.edu">karaluo@stanford.edu</a>
+        <a href="https://scholar.google.com/citations?user=7ufowOMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/karaluo/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
+      </p>
+    </div>
+    <img class="portrait" src="headshot.jpg" alt="Kara Luo"
+         onerror="this.outerHTML='&lt;div class=&quot;portrait portrait-fallback&quot;&gt;Add headshot.jpg&lt;/div&gt;'">
+  </section>
+
+  <!-- ===================== RESEARCH ===================== -->
+  <h2 id="research">Research</h2>
+  <div class="h2-rule"></div>
+
+  <p class="subhead">Published</p>
+
+  <article class="paper">
+    <h3>Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity</h3>
+    <p class="cite">Voelkel, J. G., Stagnaro, M. N., &hellip; <strong>Luo, K.</strong>, &hellip; &amp; Willer, R. · <em>Science</em>, 386(6719), eadh4764, 2024 · <a href="https://www.science.org/doi/10.1126/science.adh4764" target="_blank" rel="noopener">Link</a></p>
+    <p class="takeaway">A megastudy testing 25 interventions with over 32,000 Americans identifies which strategies most effectively reduce antidemocratic attitudes and partisan animosity.</p>
+    <details><summary>Abstract</summary><p>Scholars warn that partisan divisions in the mass public threaten the health of American democracy. We conducted a megastudy (n = 32,059 participants) testing 25 treatments designed by academics and practitioners to reduce Americans&rsquo; partisan animosity and antidemocratic attitudes. We find that many treatments reduced partisan animosity, most strongly by highlighting relatable sympathetic individuals with different political beliefs or by emphasizing common identities shared by rival partisans. We also identify several treatments that reduced support for undemocratic practices&mdash;most strongly by correcting misperceptions of rival partisans&rsquo; views or highlighting the threat of democratic collapse&mdash;which shows that antidemocratic attitudes are not intractable. Taken together, the study&rsquo;s findings identify promising general strategies for reducing partisan division and improving democratic attitudes, shedding theoretical light on challenges facing American democracy.</p></details>
+  </article>
+
+  <article class="paper">
+    <h3>Overperception of moral outrage in online social networks inflates beliefs about intergroup hostility</h3>
+    <p class="cite">Brady, W. J., McLoughlin, K. L., Torres, M. P., <strong>Luo, K. F.</strong>, Gendron, M., &amp; Crockett, M. J. · <em>Nature Human Behaviour</em>, 7, 917&ndash;927, 2023 · <a href="https://www.nature.com/articles/s41562-023-01582-0" target="_blank" rel="noopener">Link</a></p>
+    <p class="takeaway">People systematically overestimate how much moral outrage others feel online, and this misperception inflates their beliefs about how hostile opposing groups are.</p>
+    <details><summary>Abstract</summary><p>As individuals and political leaders increasingly interact in online social networks, it is important to understand the dynamics of emotion perception online. Here, we propose that social media users overperceive levels of moral outrage felt by individuals and groups, inflating beliefs about intergroup hostility. Using a Twitter field survey, we measured authors&rsquo; moral outrage in real time and compared authors&rsquo; reports to observers&rsquo; judgements of the authors&rsquo; moral outrage. We find that observers systematically overperceive moral outrage in authors, inferring more intense moral outrage experiences from messages than the authors of those messages actually reported. This effect was stronger in participants who spent more time on social media to learn about politics. Preregistered confirmatory behavioural experiments found that overperception of individuals&rsquo; moral outrage causes overperception of collective moral outrage and inflates beliefs about hostile communication norms, group affective polarization and ideological extremity. Together, these results highlight how individual-level overperceptions of online moral outrage produce collective overperceptions that have the potential to warp our social knowledge of moral and political attitudes.</p></details>
+  </article>
+
+  <p class="subhead">Under Review</p>
+
+  <article class="paper">
+    <h3>Human Coordination Shapes the Promise and Limits of Autonomous Agents</h3>
+    <p class="cite">Zhang, J., <strong>Luo, K.</strong>, Clement, J. &amp; Klapper, H. · <span class="badge">Under review</span></p>
+    <p class="takeaway">Across two decades and 763 Wikipedia communities, autonomous bots help articles advance from the lowest quality tiers&mdash;but reaching the highest tier depends on human coordination, revealing that AI augments collective production only with greater, less decentralized human effort.</p>
+    <details><summary>Abstract</summary><p>Online communities have enabled major collective achievements by allowing many individuals to contribute with little coordination or centralized control. Increasingly, autonomous AI agents are being deployed alongside human contributors to support these communities. Prior research suggests that such agents can improve efficiency and expand the scope of tasks that online communities can undertake. However, there is limited longitudinal evidence on whether these benefits extend to the highest-quality outcomes, and whether they can be realized without costly changes in how community members coordinate their work. Here we analyze over two decades of activity across 763 Wikipedia subcommunities, where large numbers of autonomous agents (&ldquo;bots&rdquo;) have performed critical tasks since early in the platform&rsquo;s history. Greater bot activity is associated with more articles advancing from the lowest quality tiers each month, but shows little to no association with advancement to the highest quality tier. These divergent patterns are shaped by human coordination: at all stages, articles improve most when bot activity coincides with article-level discussions, and advancement to the highest tiers is especially likely when bot activity aligns with both article-level and community-level discussions. Overall, these findings highlight both the promise and the limits of autonomous agents: while AI can augment collective production, achieving the best outcomes may require greater coordination&mdash;and potentially less decentralization&mdash;than has historically characterized online communities. Because Wikipedia&rsquo;s bots represent an early generation of AI, our results provide a baseline for evaluating how more capable agents may reshape online communities in the future.</p></details>
+  </article>
+
+  <article class="paper">
+    <h3>Beyond Persuasion: Improving Conversational Quality Around High-Stakes Interpersonal Disagreements</h3>
+    <p class="cite">Minson, J. A., Hagmann, D., &amp; <strong>Luo, K.</strong> · <span class="badge">Under review</span> · <a href="https://static1.squarespace.com/static/66b910e3c6dfe92cb750a34a/t/66c3ee58e07f296b7be8c58b/1724116568711/Minson%2C+Hagmann%2C+Luo.pdf" target="_blank" rel="noopener">PDF</a></p>
+    <p class="takeaway">Tests interventions that improve the quality of conversations during high-stakes disagreements&mdash;not by changing minds, but by changing how people engage.</p>
+    <p class="coverage">Presented at: Society for Judgment and Decision Making (poster, 2023); Academy of Management (2024).</p>
+  </article>
+
+  <p class="subhead">In Progress</p>
+
+  <article class="paper">
+    <h3>The Comprehension-Competition Tradeoff: How Entrepreneurial Analogies Shape New Venture Evaluation</h3>
+    <p class="cite"><strong>Luo, K.</strong> · <em>In preparation</em></p>
+    <p class="takeaway">Investigates how the analogies used to describe novel ventures and products are a double-edged sword: the same mechanism that lets a pitch like &ldquo;Uber for dogs&rdquo; clarify an offering for audiences also leads them to perceive greater competition.</p>
+    <p class="coverage">Presented at: UCLA Price Center Spring Conference on Entrepreneurship and Innovation (2025).</p>
+  </article>
+
+  <article class="paper">
+    <h3>The Broken Geometry of Culture</h3>
+    <p class="cite"><strong>Luo, K.</strong> &amp; Goldberg, A. · <em>In preparation</em></p>
+    <p class="takeaway">Demonstrates that not all disagreements are created equal: <em>how</em> two people's interpretations differ&mdash;not how much&mdash;determines whether conflict erupts, with opposing interpretations breeding negative emotions and distrust while orthogonal ones do not.</p>
+    <p class="coverage">Presented at: Academy of Management (2025); IC2S2 (2025); Sociological Science Conference (2026).</p>
+  </article>
+
+  <article class="paper">
+    <h3>Interpretations and Intentions: Entrepreneurs as Born, Made, or Both</h3>
+    <p class="cite"><strong>Luo, K.</strong> · <em>In preparation</em></p>
+    <p class="takeaway">Asks how individuals' interpretations of the concept &ldquo;entrepreneur&rdquo;&mdash;as something one is born as, made into, or both&mdash;shape their own entrepreneurial intentions.</p>
+  </article>
+
+  <!-- ===================== TEACHING ===================== -->
+  <h2 id="teaching">Teaching</h2>
+  <div class="h2-rule"></div>
+  <p class="subhead">Teaching Assistant, Stanford Graduate School of Business</p>
+  <div class="course"><strong>Strategic Leadership: Crafting and Leading Strategy</strong><span>Spring 2026</span></div>
+  <div class="course"><strong>Organizational Principles from Unusual Places</strong><span>Winter 2026, Spring 2025</span></div>
+  <div class="course"><strong>Acting with Power</strong><span>Fall 2025, Fall 2024</span></div>
+  <div class="course"><strong>People Operations: From Startup to Scaleup</strong><span>Winter 2024</span></div>
+
+  <p class="subhead">Teaching Assistant, MIT &amp; MIT Sloan</p>
+  <div class="course"><strong>Negotiation Analysis</strong><span>MIT Sloan · IAP 2022</span></div>
+  <div class="course"><strong>Introduction to Data Science</strong><span>MIT · Spring 2020</span></div>
+  <div class="course"><strong>Introduction to Machine Learning</strong><span>MIT · Fall 2018</span></div>
+  <div class="course"><strong>Computational Structures</strong><span>MIT · Spring 2018</span></div>
+
+  <p class="subhead">From student course reviews</p>
+  <!-- Replace the placeholder text below with real comments from your evaluations.
+       Keep each short (1–2 sentences). Attribution line: course + term, kept anonymous. -->
+  <div class="quotes">
+    <figure class="quote">
+      <p>Never seen a CA be more engaged in a course.</p>
+      <figcaption class="who">Student, Strategic Leadership: Crafting and Leading Strategy · Spring 2026</figcaption>
+    </figure>
+    <figure class="quote">
+      <p>Kara did a great job of giving thorough explanations for assignment gradings, which left very little room for confusion.</p>
+      <figcaption class="who">Student, Organizational Principles from Unusual Places · Winter 2026</figcaption>
+    </figure>
+    <figure class="quote">
+      <p>You bring such a calming presence to the class&mdash;I really appreciated your dedication.</p>
+      <figcaption class="who">Student, Acting with Power · Autumn 2025</figcaption>
+    </figure>
+    <figure class="quote">
+      <p>Kara is super responsive, provides clear feedback, is very helpful.</p>
+      <figcaption class="who">Student, Organizational Principles from Unusual Places · Spring 2025</figcaption>
+    </figure>
+  </div>
+
+  <!-- ===================== CV ===================== -->
+  <h2 id="cv">Curriculum Vitae</h2>
+  <div class="h2-rule"></div>
+  <p class="cv-actions"><a href="CV.pdf" target="_blank" rel="noopener">Open in a new tab</a> &middot; <a href="CV.pdf" download>Download PDF</a></p>
+  <iframe class="cv-frame" src="CV.pdf#view=FitH&pagemode=none" title="Kara Luo — Curriculum Vitae" loading="lazy">
+    Your browser can&rsquo;t display the embedded PDF. <a href="CV.pdf">Download the CV instead.</a>
+  </iframe>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#main">Home</a>
+    <a href="#research">Research</a>
+    <a href="#cv">CV</a>
+    <a href="https://scholar.google.com/citations?user=7ufowOMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/karaluo/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:karaluo@stanford.edu">karaluo@stanford.edu</a>
+    <div style="margin-top:10px">© <span id="yr"></span> Kara Luo</div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
